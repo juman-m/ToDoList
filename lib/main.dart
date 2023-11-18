@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:to_do_list/databasekey.dart';
 import 'package:to_do_list/screens/home_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Supabase.initialize(
-      url: "https://hvyslowrljbhagxswlch.supabase.co",
-      anonKey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2eXNsb3dybGpiaGFneHN3bGNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk3NzcyNjQsImV4cCI6MjAxNTM1MzI2NH0.DreHlprBLTK2iL-wqqOTzs1V6jVGebFIVrPCd_fJIx0");
+  await dataBaseKey();
   runApp(const MainApp());
 }
 
